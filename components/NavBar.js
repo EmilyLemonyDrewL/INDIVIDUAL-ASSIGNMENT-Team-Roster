@@ -10,8 +10,14 @@ export default function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link passHref href="/">
-          <Navbar.Brand>CHANGE ME</Navbar.Brand>
+        <Link passHref href="/team">
+          <Navbar.Brand>Teams</Navbar.Brand>
+        </Link>
+        <Link passHref href="/teamMember">
+          <Navbar.Brand>View All</Navbar.Brand>
+        </Link>
+        <Link passHref href="/teamMember/new">
+          <Navbar.Brand>Add Members</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

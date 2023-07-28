@@ -1,0 +1,38 @@
+{
+  "1234": {
+    "name": "Lucky",
+    "skill_set": "Can survive horrible accidents and talk to the deceased",
+    "weakness": "snacks",
+    "image": "https://dodo.ac/np/images/thumb/5/59/Lucky_NH.png/225px-Lucky_NH.png",
+    "team_id": "001",
+    "firebaseKey": "1234",
+    "uid": ""
+  },
+  "2345": {
+    "name": "Riku",
+    "skill_set": "Can harness the power of darkness and is a loyal friend",
+    "weakness": "jealousy",
+    "image": "https://static.wikia.nocookie.net/kingdomhearts/images/d/dc/Riku_KH.png/revision/latest?cb=20170526023732josh ",
+    "team_id": "001",
+    "firebaseKey": "2345",
+    "uid": ""
+  },
+  "3456": {
+    "name": "Josh Washington",
+    "skill_set": "Can set booby traps and is good with his hands",
+    "weakness": "hallucinations",
+    "image": "https://i.pinimg.com/originals/93/05/4f/93054fbc986b48bc2c5ac6c28caa4646.png",
+    "team_id": "002",
+    "firebaseKey": "3456",
+    "uid": ""
+  },
+  "5678": {
+    "name": "Kate Denson",
+    "skill_set": "Good at hiding and making escape plans",
+    "weakness": "slow runner",
+    "image": "https://preview.redd.it/ultimate-kate-denson-outfit-collection-6-4-1-v0-ro9i3m9qlt3a1.jpg?width=1287&format=pjpg&auto=webp&s=b2bf2ed6c7f827dae1018b2b07986a62ce57b2c2",
+    "team_id": "002",
+    "firebaseKey": "5678",
+    "uid": ""
+  }
+}

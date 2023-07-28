@@ -1,0 +1,12 @@
+{
+  "0028": {
+    "team_name": "Sun",
+    "firebaseKey": "0028",
+    "uid": ""
+  },
+  "0027": {
+    "team_name": "Moon",
+    "firebaseKey": "0027",
+    "uid": ""
+  }
+}
