@@ -11,7 +11,7 @@ function TeamCard({ teamObj, onUpdate }) {
   }
 
   const deleteThisTeam = () => {
-    if (window.confirm('Delete $(teamObj.team_name) + all of the team members?')) {
+    if (window.confirm(`Delete ${teamObj.team_name} + all of their books?`)) {
       deleteTeamMembers(teamObj.firebaseKey).then(() => onUpdate());
     }
   };

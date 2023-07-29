@@ -16,6 +16,9 @@ export default function NavBar() {
         <Link passHref href="/teamMember/new">
           <Navbar.Brand>Add Members</Navbar.Brand>
         </Link>
+        <Link passHref href="/teamMembers">
+          <Navbar.Brand>View Members</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
