@@ -1,16 +1,17 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
+import { Button, FloatingLabel } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import PropTypes from 'prop-types';
 import { createTeam, updateTeam } from '../../api/teamData';
 import { useAuth } from '../../utils/context/authContext';
 
-const initialState = {
+const initialTeamState = {
   team_name: '',
 };
 
 function TeamForm({ obj }) {
-  const [tFormInput, setTFormInput] = useState(initialState);
+  const [tFormInput, setTFormInput] = useState(initialTeamState);
   const router = useRouter();
   const { user } = useAuth();
 
@@ -47,10 +48,10 @@ function TeamForm({ obj }) {
     <Form onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Team</h2>
 
-      <FloatingLabel controlId="FloatingInput1" label="Team Name" className="mb-3">
+      <FloatingLabel controlId="FloatingInputT1" label="Team Name" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Team Planet"
+          placeholder="Star"
           name="team_name"
           value={tFormInput.team_name}
           onChange={handleChange}
@@ -72,7 +73,7 @@ TeamForm.propTypes = {
 };
 
 TeamForm.defaultProps = {
-  obj: initialState,
+  obj: initialTeamState,
 };
 
 export default TeamForm;

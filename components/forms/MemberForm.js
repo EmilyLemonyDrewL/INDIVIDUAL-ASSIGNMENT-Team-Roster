@@ -21,7 +21,7 @@ function MemberForm({ obj }) {
   const { user } = useAuth();
 
   useEffect(() => {
-    getTeams(user.id).then(setTeams);
+    getTeams(user.uid).then(setTeams);
 
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
@@ -37,13 +37,13 @@ function MemberForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateMember(formInput).then(() => router.push(`/member/${obj.firebaseKey}`));
+      updateMember(formInput).then(() => router.push(`/teamMember/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createMember(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateMember(patchPayload).then(() => {
-          router.push('/');
+          router.push('/teamMembers');
         });
       });
     }
@@ -104,7 +104,7 @@ function MemberForm({ obj }) {
           name="team_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.team_id}
+          value={formInput.team_id}
           required
         >
           <option value="">Select A Team</option>
