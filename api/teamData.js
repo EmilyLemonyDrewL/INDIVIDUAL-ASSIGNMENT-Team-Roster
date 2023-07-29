@@ -79,7 +79,7 @@ const updateTeam = (payload) => new Promise((resolve, reject) => {
 
 // GET A SINGLE TEAMS MEMBERS
 const getTeamsMembers = (firesbaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/teams.json?orderBy="team_id"&equalTo="${firesbaseKey}"`, {
+  fetch(`${endpoint}/members.json?orderBy="team_id"&equalTo="${firesbaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
