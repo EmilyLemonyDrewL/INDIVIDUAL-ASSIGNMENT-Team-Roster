@@ -19,7 +19,6 @@ function MemberCard({ memberObj, onUpdate }) {
         <Card.Title>{memberObj.name}</Card.Title>
         <p>Skills: {memberObj.skill_set}</p>
         <p>Weakness(es): {memberObj.weakness}</p>
-        <Button variant="primary">SWITCH TEAM</Button>
         <Link href={`/teamMember/edit/${memberObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>

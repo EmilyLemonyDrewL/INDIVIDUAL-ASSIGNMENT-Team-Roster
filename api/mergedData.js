@@ -5,9 +5,9 @@ const viewMemberDetails = (memberFirebaseKey) => new Promise((resolve, reject) =
   getSingleMember(memberFirebaseKey)
     .then((memberObject) => {
       getSingleTeam(memberObject.team_id)
-        .then((teamObject) => {
+    .then((teamObject) => {
           resolve({ teamObject, ...memberObject });
-        });
+      });
     }).catch((error) => reject(error));
 });
 
