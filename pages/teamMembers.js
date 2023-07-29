@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line import/no-unresolved
 import Link from 'next/link';
-import { Button } from 'react-bootstrap';
-import { getMembers } from '../../api/memberData';
-import { useAuth } from '../../utils/context/authContext';
-import MemberCard from '../../components/MemberCard';
+import Button from 'react-bootstrap/Button';
+import { getMembers } from '../api/memberData';
+import MemberCard from '../components/MemberCard';
+import { useAuth } from '../utils/context/authContext';
 
 function ShowAllMembers() {
   const [members, setMembers] = useState([]);
   const { user } = useAuth();
+  // create function to calls API and gets members
   const getAllTheMembers = () => {
     getMembers(user.uid).then(setMembers);
   };
 
   useEffect(() => {
     getAllTheMembers();
-  });
+  }, []);
 
   return (
     <div className="text-center my-4">
@@ -28,7 +28,6 @@ function ShowAllMembers() {
         ))}
       </div>
     </div>
-
   );
 }
 
