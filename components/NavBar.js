@@ -10,11 +10,8 @@ export default function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link passHref href="/team">
+        <Link passHref href="/teams">
           <Navbar.Brand>Teams</Navbar.Brand>
-        </Link>
-        <Link passHref href="/teamMember">
-          <Navbar.Brand>View All</Navbar.Brand>
         </Link>
         <Link passHref href="/teamMember/new">
           <Navbar.Brand>Add Members</Navbar.Brand>

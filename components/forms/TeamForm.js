@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
-import { propTypes } from 'react-bootstrap/esm/Image';
+import PropTypes from 'prop-types';
 import { createTeam, updateTeam } from '../../api/teamData';
 import { useAuth } from '../../utils/context/authContext';
 
@@ -65,9 +65,9 @@ function TeamForm({ obj }) {
 }
 
 TeamForm.propTypes = {
-  obj: propTypes.shape({
-    team_name: propTypes.string,
-    firebaseKey: propTypes.string,
+  obj: PropTypes.shape({
+    team_name: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }),
 };
 
